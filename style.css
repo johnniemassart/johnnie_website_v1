@@ -288,8 +288,8 @@ img {
 .catalog-nav-top {
   grid-area: topNav;
   display: flex;
-  justify-content: start;
-  align-items: start;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .home-catalog {
@@ -302,8 +302,8 @@ img {
 .catalog-nav-bottom {
   grid-area: bottomNav;
   display: flex;
-  justify-content: end;
-  align-items: end;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 .contact-catalog {
