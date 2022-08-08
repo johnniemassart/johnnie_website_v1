@@ -146,7 +146,7 @@ window.addEventListener('load', () => {
     // JACKET
     const jacketImg = document.querySelector('.jacket-img');
 
-    contentInner[4].addEventListener('mouseenter', () => {
+    contentInner[4].addEventListener('pointerenter', () => {
         contentInner[4].children[0].style.zIndex = '6';
         contentInner[4].children[1].style.zIndex = '6';
         jacketImg.classList.add('jacket-img-displayed');
@@ -155,23 +155,23 @@ window.addEventListener('load', () => {
     });
     
     // TOUCH
-    contentInner[4].addEventListener('touchend', () => {
-        contentInner[4].children[0].style.zIndex = '6';
-        contentInner[4].children[1].style.zIndex = '6';
-        jacketImg.classList.add('jacket-img-displayed');
-        jacketImg.style.opacity = '1';
-        jacketImg.style.transition = '300ms ease';
-    });
+//     contentInner[4].addEventListener('touchend', () => {
+//         contentInner[4].children[0].style.zIndex = '6';
+//         contentInner[4].children[1].style.zIndex = '6';
+//         jacketImg.classList.add('jacket-img-displayed');
+//         jacketImg.style.opacity = '1';
+//         jacketImg.style.transition = '300ms ease';
+//     });
     
-    contentInner[4].addEventListener('touchleave', () => {
-        contentInner[4].children[0].style.zIndex = '6';
-        contentInner[4].children[1].style.zIndex = '6';
-        jacketImg.classList.add('jacket-img-displayed');
-        jacketImg.style.opacity = '1';
-        jacketImg.style.transition = '300ms ease';
-    });
+//     contentInner[4].addEventListener('touchleave', () => {
+//         contentInner[4].children[0].style.zIndex = '6';
+//         contentInner[4].children[1].style.zIndex = '6';
+//         jacketImg.classList.add('jacket-img-displayed');
+//         jacketImg.style.opacity = '1';
+//         jacketImg.style.transition = '300ms ease';
+//     });
 
-    contentInner[4].addEventListener('mouseleave', () => {
+    contentInner[4].addEventListener('pointerleave', () => {
         jacketImg.classList.remove('jacket-img-displayed');
         jacketImg.style.opacity = '0';
         jacketImg.style.transition = '300ms ease';
