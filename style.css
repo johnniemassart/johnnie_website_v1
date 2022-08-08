@@ -20,6 +20,10 @@ body {
   align-items: center;
 }
 
+.img-container {
+  overflow: hidden;
+}
+
 img {
   width: 200px;
   object-fit: cover;
