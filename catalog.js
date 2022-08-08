@@ -171,7 +171,7 @@ window.addEventListener('load', () => {
     });
     
     // TOUCH
-    contentInner[4].addEventListener('touchleave', () => {
+    contentInner[4].addEventListener('touchcancel', () => {
         jacketImg.classList.remove('jacket-img-displayed');
         jacketImg.style.opacity = '0';
         jacketImg.style.transition = '300ms ease';
