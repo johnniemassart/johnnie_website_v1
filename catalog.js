@@ -29,7 +29,7 @@ window.addEventListener('load', () => {
             inner.children[1].style.transition = '300ms ease';
         });
         // TOUCH
-        inner.addEventListener('touchend', () => {
+        inner.addEventListener('touchmove', () => {
             inner.children[1].style.opacity = '1';
             inner.children[1].style.transition = '300ms ease';
         });
@@ -51,7 +51,7 @@ window.addEventListener('load', () => {
         img1.style.transition = '300ms ease';
     });
     // TOUCH
-    contentInner[0].addEventListener('touchend', () => {
+    contentInner[0].addEventListener('touchmove', () => {
         contentInner[0].children[0].style.zIndex = '6';
         contentInner[0].children[1].style.zIndex = '6';
         img1.classList.add('image-board-img');
@@ -59,7 +59,7 @@ window.addEventListener('load', () => {
         img1.style.transition = '300ms ease';
     });
 
-    contentInner[0].addEventListener('pointerleave', () => {
+    contentInner[0].addEventListener('mouseleave', () => {
         img1.classList.remove('image-board-img');
         img1.style.opacity = '0';
         img1.style.transition = '300ms ease';
