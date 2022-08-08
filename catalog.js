@@ -28,17 +28,15 @@ window.addEventListener('load', () => {
             inner.children[1].style.opacity = '1';
             inner.children[1].style.transition = '300ms ease';
         });
-        // TOUCH
-        inner.addEventListener('touchstart', () => {
-            inner.children[1].style.opacity = '1';
-            inner.children[1].style.transition = '300ms ease';
-        });
         inner.addEventListener('mouseleave', () => {
             inner.children[1].style.opacity = '';
             inner.children[1].style.transition = '300ms ease';
         });
-        inner.addEventListener('touchend', () => {
-            inner.children[1].style.opacity = '';
+        // TOUCH
+        inner.addEventListener('touchstart', () => {
+            inner.style.opacity = '0';
+            inner.style.transition = '300ms ease';
+            inner.children[1].style.opacity = '1';
             inner.children[1].style.transition = '300ms ease';
         });
     });
@@ -54,14 +52,6 @@ window.addEventListener('load', () => {
         img1.style.opacity = '1';
         img1.style.transition = '300ms ease';
     });
-    // TOUCH
-    contentInner[0].addEventListener('touchstart', () => {
-        contentInner[0].children[0].style.zIndex = '6';
-        contentInner[0].children[1].style.zIndex = '6';
-        img1.classList.add('image-board-img');
-        img1.style.opacity = '1';
-        img1.style.transition = '300ms ease';
-    });
 
     contentInner[0].addEventListener('mouseleave', () => {
         img1.classList.remove('image-board-img');
@@ -69,9 +59,14 @@ window.addEventListener('load', () => {
         img1.style.transition = '300ms ease';
     });
     
-    contentInner[0].addEventListener('touchend', () => {
-        img1.classList.remove('image-board-img');
-        img1.style.opacity = '0';
+    // TOUCH
+    contentInner[0].addEventListener('touchstart', () => {
+        contentInner.style.opacity = '0';
+        contentInner.style.transition = '300ms ease';
+        contentInner[0].children[0].style.zIndex = '6';
+        contentInner[0].children[1].style.zIndex = '6';
+        img1.classList.add('image-board-img');
+        img1.style.opacity = '1';
         img1.style.transition = '300ms ease';
     });
 
@@ -98,7 +93,7 @@ window.addEventListener('load', () => {
     const imgTsr1 = document.querySelector('.imgTsr-1');
     const imgTsr2 = document.querySelector('.imgTsr-2');
 
-    contentInner[2].addEventListener('pointerenter', () => {
+    contentInner[2].addEventListener('mouseenter', () => {
         contentInner[2].children[0].style.zIndex = '6';
         contentInner[2].children[1].style.zIndex = '6';
         imgTsr1.classList.add('imgTsr-1-displayed');
@@ -109,12 +104,26 @@ window.addEventListener('load', () => {
         imgTsr2.style.transition = '300ms ease';
     });
     
-    contentInner[2].addEventListener('pointerleave', () => {
+    contentInner[2].addEventListener('mouseleave', () => {
         imgTsr1.classList.remove('imgTsr-1-displayed');
         imgTsr1.style.opacity = '0';
         imgTsr1.style.transition = '300ms ease';
         imgTsr2.classList.remove('imgTsr-2-displayed');
         imgTsr2.style.opacity = '0';
+        imgTsr2.style.transition = '300ms ease';
+    });
+    
+    // TOUCH
+    contentInner[2].addEventListener('touchstart', () => {
+        contentInner.style.opacity = '0';
+        contentInner.style.transition = '300ms ease';
+        contentInner[2].children[0].style.zIndex = '6';
+        contentInner[2].children[1].style.zIndex = '6';
+        imgTsr1.classList.add('imgTsr-1-displayed');
+        imgTsr1.style.opacity = '1';
+        imgTsr1.style.transition = '300ms ease';
+        imgTsr2.classList.add('imgTsr-2-displayed');
+        imgTsr2.style.opacity = '1';
         imgTsr2.style.transition = '300ms ease';
     });
 
@@ -140,7 +149,7 @@ window.addEventListener('load', () => {
     // JACKET
     const jacketImg = document.querySelector('.jacket-img');
 
-    contentInner[4].addEventListener('pointerenter', () => {
+    contentInner[4].addEventListener('mouseenter', () => {
         contentInner[4].children[0].style.zIndex = '6';
         contentInner[4].children[1].style.zIndex = '6';
         jacketImg.classList.add('jacket-img-displayed');
@@ -148,11 +157,22 @@ window.addEventListener('load', () => {
         jacketImg.style.transition = '300ms ease';
     });
 
-    contentInner[4].addEventListener('pointerleave', () => {
+    contentInner[4].addEventListener('mouseleave', () => {
         jacketImg.classList.remove('jacket-img-displayed');
         jacketImg.style.opacity = '0';
         jacketImg.style.transition = '300ms ease';
         
+    });
+    
+    // TOUCH
+    contentInner[4].addEventListener('touchstart', () => {
+        contentInner.style.opacity = '0';
+        contentInner.style.transition = '300ms ease';
+        contentInner[4].children[0].style.zIndex = '6';
+        contentInner[4].children[1].style.zIndex = '6';
+        jacketImg.classList.add('jacket-img-displayed');
+        jacketImg.style.opacity = '1';
+        jacketImg.style.transition = '300ms ease';
     });
 
 });
