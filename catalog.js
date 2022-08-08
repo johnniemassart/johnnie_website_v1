@@ -59,8 +59,6 @@ window.addEventListener('load', () => {
     
     // TOUCH
     contentInner[0].addEventListener('touchstart', () => {
-        contentInner.style.opacity = '0';
-        contentInner.style.transition = '300ms ease';
         contentInner[0].children[0].style.zIndex = '6';
         contentInner[0].children[1].style.zIndex = '6';
         img1.classList.add('image-board-img');
@@ -113,8 +111,6 @@ window.addEventListener('load', () => {
     
     // TOUCH
     contentInner[2].addEventListener('touchstart', () => {
-        contentInner.style.opacity = '0';
-        contentInner.style.transition = '300ms ease';
         contentInner[2].children[0].style.zIndex = '6';
         contentInner[2].children[1].style.zIndex = '6';
         imgTsr1.classList.add('imgTsr-1-displayed');
@@ -164,8 +160,6 @@ window.addEventListener('load', () => {
     
     // TOUCH
     contentInner[4].addEventListener('touchstart', () => {
-        contentInner.style.opacity = '0';
-        contentInner.style.transition = '300ms ease';
         contentInner[4].children[0].style.zIndex = '6';
         contentInner[4].children[1].style.zIndex = '6';
         jacketImg.classList.add('jacket-img-displayed');
