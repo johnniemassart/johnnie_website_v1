@@ -155,7 +155,7 @@ window.addEventListener('load', () => {
     });
     
     // TOUCH
-    contentInner[4].addEventListener('touchstart', () => {
+    contentInner[4].addEventListener('touchend', () => {
         contentInner[4].children[0].style.zIndex = '6';
         contentInner[4].children[1].style.zIndex = '6';
         jacketImg.classList.add('jacket-img-displayed');
