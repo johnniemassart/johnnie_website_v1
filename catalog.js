@@ -36,14 +36,10 @@ window.addEventListener('load', () => {
 
     // TOUCH EVENTS
     contentInner.forEach(inner => {
-        inner.addEventListener('touchstart', () => {
+        inner.addEventListener('touchenter', () => {
             inner.children[1].style.opacity = '1';
             inner.children[1].style.transition = '300ms ease';
         });
-//         inner.addEventListener('touchend', () => {
-//             inner.children[1].style.opacity = '';
-//             inner.children[1].style.transition = '300ms ease';
-//         });
     });
 
     // IMAGE BOARD
@@ -59,7 +55,7 @@ window.addEventListener('load', () => {
     });
     
     // TOUCH
-    contentInner[0].addEventListener('touchstart', () => {
+    contentInner[0].addEventListener('touchenter', () => {
         contentInner[0].children[0].style.zIndex = '6';
         contentInner[0].children[1].style.zIndex = '6';
         img1.classList.add('image-board-img');
@@ -108,7 +104,7 @@ window.addEventListener('load', () => {
     });
     
     // TOUCH
-    contentInner[2].addEventListener('touchstart', () => {
+    contentInner[2].addEventListener('touchenter', () => {
         contentInner[2].children[0].style.zIndex = '6';
         contentInner[2].children[1].style.zIndex = '6';
         imgTsr1.classList.add('imgTsr-1-displayed');
@@ -159,7 +155,7 @@ window.addEventListener('load', () => {
     });
     
     // TOUCH
-    contentInner[4].addEventListener('touchstart', () => {
+    contentInner[4].addEventListener('touchenter', () => {
         contentInner[4].children[0].style.zIndex = '6';
         contentInner[4].children[1].style.zIndex = '6';
         jacketImg.classList.add('jacket-img-displayed');
