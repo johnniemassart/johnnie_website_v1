@@ -33,7 +33,7 @@ window.addEventListener('load', () => {
             inner.children[1].style.opacity = '1';
             inner.children[1].style.transition = '300ms ease';
         });
-        inner.addEventListener('pointerleave', () => {
+        inner.addEventListener('mouseleave', () => {
             inner.children[1].style.opacity = '';
             inner.children[1].style.transition = '300ms ease';
         });
