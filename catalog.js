@@ -24,20 +24,12 @@ window.addEventListener('load', () => {
 
     // MOUSE EVENTS
     contentInner.forEach(inner => {
-        inner.addEventListener('mouseenter', () => {
+        inner.addEventListener('pointerenter', () => {
             inner.children[1].style.opacity = '1';
             inner.children[1].style.transition = '300ms ease';
         });
-        inner.addEventListener('mouseleave', () => {
+        inner.addEventListener('pointerleave', () => {
             inner.children[1].style.opacity = '';
-            inner.children[1].style.transition = '300ms ease';
-        });
-    });
-
-    // TOUCH EVENTS
-    contentInner.forEach(inner => {
-        inner.addEventListener('touchend', () => {
-            inner.children[1].style.opacity = '1';
             inner.children[1].style.transition = '300ms ease';
         });
     });
@@ -46,16 +38,7 @@ window.addEventListener('load', () => {
 
     const img1 = document.querySelector('.img1');
 
-    contentInner[0].addEventListener('mouseenter', () => {
-        contentInner[0].children[0].style.zIndex = '6';
-        contentInner[0].children[1].style.zIndex = '6';
-        img1.classList.add('image-board-img');
-        img1.style.opacity = '1';
-        img1.style.transition = '300ms ease';
-    });
-    
-    // TOUCH
-    contentInner[0].addEventListener('touchend', () => {
+    contentInner[0].addEventListener('pointerenter', () => {
         contentInner[0].children[0].style.zIndex = '6';
         contentInner[0].children[1].style.zIndex = '6';
         img1.classList.add('image-board-img');
@@ -63,7 +46,7 @@ window.addEventListener('load', () => {
         img1.style.transition = '300ms ease';
     });
 
-    contentInner[0].addEventListener('mouseleave', () => {
+    contentInner[0].addEventListener('pointerleave', () => {
         img1.classList.remove('image-board-img');
         img1.style.opacity = '0';
         img1.style.transition = '300ms ease';
@@ -92,7 +75,7 @@ window.addEventListener('load', () => {
     const imgTsr1 = document.querySelector('.imgTsr-1');
     const imgTsr2 = document.querySelector('.imgTsr-2');
 
-    contentInner[2].addEventListener('mouseenter', () => {
+    contentInner[2].addEventListener('pointerenter', () => {
         contentInner[2].children[0].style.zIndex = '6';
         contentInner[2].children[1].style.zIndex = '6';
         imgTsr1.classList.add('imgTsr-1-displayed');
@@ -103,19 +86,7 @@ window.addEventListener('load', () => {
         imgTsr2.style.transition = '300ms ease';
     });
     
-    // TOUCH
-    contentInner[2].addEventListener('touchend', () => {
-        contentInner[2].children[0].style.zIndex = '6';
-        contentInner[2].children[1].style.zIndex = '6';
-        imgTsr1.classList.add('imgTsr-1-displayed');
-        imgTsr1.style.opacity = '1';
-        imgTsr1.style.transition = '300ms ease';
-        imgTsr2.classList.add('imgTsr-2-displayed');
-        imgTsr2.style.opacity = '1';
-        imgTsr2.style.transition = '300ms ease';
-    });
-
-    contentInner[2].addEventListener('mouseleave', () => {
+    contentInner[2].addEventListener('pointerleave', () => {
         imgTsr1.classList.remove('imgTsr-1-displayed');
         imgTsr1.style.opacity = '0';
         imgTsr1.style.transition = '300ms ease';
@@ -153,23 +124,6 @@ window.addEventListener('load', () => {
         jacketImg.style.opacity = '1';
         jacketImg.style.transition = '300ms ease';
     });
-    
-    // TOUCH
-//     contentInner[4].addEventListener('touchend', () => {
-//         contentInner[4].children[0].style.zIndex = '6';
-//         contentInner[4].children[1].style.zIndex = '6';
-//         jacketImg.classList.add('jacket-img-displayed');
-//         jacketImg.style.opacity = '1';
-//         jacketImg.style.transition = '300ms ease';
-//     });
-    
-//     contentInner[4].addEventListener('touchleave', () => {
-//         contentInner[4].children[0].style.zIndex = '6';
-//         contentInner[4].children[1].style.zIndex = '6';
-//         jacketImg.classList.add('jacket-img-displayed');
-//         jacketImg.style.opacity = '1';
-//         jacketImg.style.transition = '300ms ease';
-//     });
 
     contentInner[4].addEventListener('pointerleave', () => {
         jacketImg.classList.remove('jacket-img-displayed');
@@ -177,13 +131,5 @@ window.addEventListener('load', () => {
         jacketImg.style.transition = '300ms ease';
         
     });
-    
-    // TOUCH
-//     contentInner[4].addEventListener('touchcancel', () => {
-//         jacketImg.classList.remove('jacket-img-displayed');
-//         jacketImg.style.opacity = '0';
-//         jacketImg.style.transition = '300ms ease';
-        
-//     });
 
 });
