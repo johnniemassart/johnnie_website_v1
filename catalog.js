@@ -24,12 +24,12 @@ window.addEventListener('load', () => {
 
     // MOUSE EVENTS
     contentInner.forEach(inner => {
-        inner.addEventListener('pointerenter', () => {
+        inner.addEventListener('mouseenter', () => {
             inner.children[1].style.opacity = '1';
             inner.children[1].style.transition = '300ms ease';
         });
         // TOUCH
-        inner.addEventListener('touchstart', () => {
+        inner.addEventListener('touchend', () => {
             inner.children[1].style.opacity = '1';
             inner.children[1].style.transition = '300ms ease';
         });
@@ -43,7 +43,7 @@ window.addEventListener('load', () => {
 
     const img1 = document.querySelector('.img1');
 
-    contentInner[0].addEventListener('pointerenter', () => {
+    contentInner[0].addEventListener('mouseenter', () => {
         contentInner[0].children[0].style.zIndex = '6';
         contentInner[0].children[1].style.zIndex = '6';
         img1.classList.add('image-board-img');
@@ -51,7 +51,7 @@ window.addEventListener('load', () => {
         img1.style.transition = '300ms ease';
     });
     // TOUCH
-    contentInner[0].addEventListener('touchstart', () => {
+    contentInner[0].addEventListener('touchend', () => {
         contentInner[0].children[0].style.zIndex = '6';
         contentInner[0].children[1].style.zIndex = '6';
         img1.classList.add('image-board-img');
