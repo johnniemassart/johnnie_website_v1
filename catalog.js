@@ -40,10 +40,10 @@ window.addEventListener('load', () => {
             inner.children[1].style.opacity = '1';
             inner.children[1].style.transition = '300ms ease';
         });
-        inner.addEventListener('touchend', () => {
-            inner.children[1].style.opacity = '';
-            inner.children[1].style.transition = '300ms ease';
-        });
+//         inner.addEventListener('touchend', () => {
+//             inner.children[1].style.opacity = '';
+//             inner.children[1].style.transition = '300ms ease';
+//         });
     });
 
     // IMAGE BOARD
@@ -51,6 +51,15 @@ window.addEventListener('load', () => {
     const img1 = document.querySelector('.img1');
 
     contentInner[0].addEventListener('mouseenter', () => {
+        contentInner[0].children[0].style.zIndex = '6';
+        contentInner[0].children[1].style.zIndex = '6';
+        img1.classList.add('image-board-img');
+        img1.style.opacity = '1';
+        img1.style.transition = '300ms ease';
+    });
+    
+    // TOUCH
+    contentInner[0].addEventListener('touchstart', () => {
         contentInner[0].children[0].style.zIndex = '6';
         contentInner[0].children[1].style.zIndex = '6';
         img1.classList.add('image-board-img');
@@ -97,6 +106,18 @@ window.addEventListener('load', () => {
         imgTsr2.style.opacity = '1';
         imgTsr2.style.transition = '300ms ease';
     });
+    
+    // TOUCH
+    contentInner[2].addEventListener('touchstart', () => {
+        contentInner[2].children[0].style.zIndex = '6';
+        contentInner[2].children[1].style.zIndex = '6';
+        imgTsr1.classList.add('imgTsr-1-displayed');
+        imgTsr1.style.opacity = '1';
+        imgTsr1.style.transition = '300ms ease';
+        imgTsr2.classList.add('imgTsr-2-displayed');
+        imgTsr2.style.opacity = '1';
+        imgTsr2.style.transition = '300ms ease';
+    });
 
     contentInner[2].addEventListener('mouseleave', () => {
         imgTsr1.classList.remove('imgTsr-1-displayed');
@@ -130,6 +151,15 @@ window.addEventListener('load', () => {
     const jacketImg = document.querySelector('.jacket-img');
 
     contentInner[4].addEventListener('mouseenter', () => {
+        contentInner[4].children[0].style.zIndex = '6';
+        contentInner[4].children[1].style.zIndex = '6';
+        jacketImg.classList.add('jacket-img-displayed');
+        jacketImg.style.opacity = '1';
+        jacketImg.style.transition = '300ms ease';
+    });
+    
+    // TOUCH
+    contentInner[4].addEventListener('touchstart', () => {
         contentInner[4].children[0].style.zIndex = '6';
         contentInner[4].children[1].style.zIndex = '6';
         jacketImg.classList.add('jacket-img-displayed');
