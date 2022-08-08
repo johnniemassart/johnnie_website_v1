@@ -34,8 +34,6 @@ window.addEventListener('load', () => {
         });
         // TOUCH
         inner.addEventListener('touchstart', () => {
-            inner.style.opacity = '0';
-            inner.style.transition = '300ms ease';
             inner.children[1].style.opacity = '1';
             inner.children[1].style.transition = '300ms ease';
         });
